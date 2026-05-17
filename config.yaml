@@ -22,7 +22,7 @@ model_list:
 
   - model_name: mistral-smart
     litellm_params:
-      model: mistral/mistral-medium-latest
+      model: mistral/mistral-large-latest
       api_key: os.environ/MISTRAL_API_KEY
 
 general_settings:

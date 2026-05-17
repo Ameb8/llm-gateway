@@ -1,17 +1,14 @@
 services:
-  litellm:
-    image: ghcr.io/berriai/litellm:main-latest
-    container_name: litellm
+  bifrost:
+    image: maximhq/bifrost:latest
+    container_name: bifrost
     ports:
-      - "4000:4000"
+      - "8080:8080"
     env_file:
       - .env
-    volumes:
-      - ./config.yaml:/app/config.yaml
-    command:
-      - "--config"
-      - "/app/config.yaml"
     restart: unless-stopped
+    volumes:
+      - ./bifrost:/app/data
 
   db:
     image: postgres:16-alpine

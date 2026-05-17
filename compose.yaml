@@ -1,19 +1,35 @@
 services:
   litellm:
     image: ghcr.io/berriai/litellm:main-latest
-
     container_name: litellm
-
     ports:
       - "4000:4000"
     env_file:
       - .env
-
     volumes:
       - ./config.yaml:/app/config.yaml
-
     command:
       - "--config"
       - "/app/config.yaml"
-
     restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    container_name: litellm-db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - litellm_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  litellm_db_data:

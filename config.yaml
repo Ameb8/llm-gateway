@@ -2,27 +2,97 @@ model_list:
   #
   # Gemini
   #
-  - model_name: gemini-fast
+  - model_name: gemini
     litellm_params:
       model: gemini/gemini-2.5-flash
       api_key: os.environ/GEMINI_API_KEY
 
-  - model_name: gemini-smart
+  - model_name: gemini-fast
     litellm_params:
-      model: gemini/gemini-2.5-pro
+      model: gemini/gemini-2.5-flash-lite
       api_key: os.environ/GEMINI_API_KEY
 
   #
   # Mistral
   #
+  - model_name: mistral
+    litellm_params:
+      model: mistral/mistral-large-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
   - model_name: mistral-fast
     litellm_params:
       model: mistral/mistral-small-latest
       api_key: os.environ/MISTRAL_API_KEY
 
-  - model_name: mistral-smart
+  - model_name: codestrol-latest
+    litellm_params:
+      model: mistral/codestrol-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: devstral
+    litellm_params:
+      model: mistral/devstral-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: devstral-small
+    litellm_params:
+      model: mistral/devstral-small-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: magistral
+    litellm_params:
+      model: mistral/magistral-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: magistral-small
+    litellm_params:
+      model: mistral/magistral-small-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-vibe-tools
+    litellm_params:
+      model: mistral/mistral-vibe-cli-with-tools
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-vibe
+    litellm_params:
+      model: mistral/mistral-vibe-cli-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-vibe-fast
+    litellm_params:
+      model: mistral/mistral-vibe-cli-fast
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: leanstral
+    litellm_params:
+      model: mistral/labs-leanstral-2603
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-large
     litellm_params:
       model: mistral/mistral-large-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-small
+    litellm_params:
+      model: mistral/mistral-small-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-14b
+    litellm_params:
+      model: mistral/ministral-14b-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-8b
+    litellm_params:
+      model: mistral/ministral-8b-latest
+      api_key: os.environ/MISTRAL_API_KEY
+
+  - model_name: mistral-3b
+    litellm_params:
+      model: mistral/ministral-3b-latest
       api_key: os.environ/MISTRAL_API_KEY
 
 general_settings:

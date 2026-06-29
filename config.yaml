@@ -95,5 +95,189 @@ model_list:
       model: mistral/ministral-3b-latest
       api_key: os.environ/MISTRAL_API_KEY
 
+  #
+  # NVIDIA NIM - Frontier Tier (Ultra-Large, Best Performance)
+  #
+  - model_name: nim_nemotron-ultra-550b
+    litellm_params:
+      model: openai/nvidia/nemotron-3-ultra-550b-a55b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_nemotron-4-340b
+    litellm_params:
+      model: openai/nvidia/nemotron-4-340b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_qwen-397b
+    litellm_params:
+      model: openai/qwen/qwen3.5-397b-a17b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_mistral-large-675b
+    litellm_params:
+      model: openai/mistralai/mistral-large-3-675b-instruct-2512
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_llama-3.3-70b
+    litellm_params:
+      model: openai/meta/llama-3.3-70b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_mistral-large-2
+    litellm_params:
+      model: openai/mistralai/mistral-large-2-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  #
+  # NVIDIA NIM - High Performance Tier (50-120B)
+  #
+  - model_name: nim_mistral-medium-128b
+    litellm_params:
+      model: openai/mistralai/mistral-medium-3.5-128b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_qwen-122b
+    litellm_params:
+      model: openai/qwen/qwen3.5-122b-a10b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_palmyra-creative-122b
+    litellm_params:
+      model: openai/writer/palmyra-creative-122b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_mistral-small-119b
+    litellm_params:
+      model: openai/mistralai/mistral-small-4-119b-2603
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_qwen-80b
+    litellm_params:
+      model: openai/qwen/qwen3-next-80b-a3b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_yi-large
+    litellm_params:
+      model: openai/01-ai/yi-large
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_dracarys-llama-70b
+    litellm_params:
+      model: openai/abacusai/dracarys-llama-3.1-70b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_seed-oss-36b
+    litellm_params:
+      model: openai/bytedance/seed-oss-36b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_dbrx
+    litellm_params:
+      model: openai/databricks/dbrx-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  #
+  # NVIDIA NIM - Mid-Range Tier (8-22B)
+  #
+  - model_name: nim_llama-3.2-11b-vision
+    litellm_params:
+      model: openai/meta/llama-3.2-11b-vision-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_kimi-k2.6
+    litellm_params:
+      model: openai/moonshotai/kimi-k2.6
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  #
+  # NVIDIA NIM - Coding Tier
+  #
+  - model_name: nim_codellama-70b
+    litellm_params:
+      model: openai/meta/codellama-70b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_codestral-22b
+    litellm_params:
+      model: openai/mistralai/codestral-22b-instruct-v0.1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_deepseek-coder-6.7b
+    litellm_params:
+      model: openai/deepseek-ai/deepseek-coder-6.7b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_starcoder2-15b
+    litellm_params:
+      model: openai/bigcode/starcoder2-15b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_granite-34b-code
+    litellm_params:
+      model: openai/ibm/granite-34b-code-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_granite-8b-code
+    litellm_params:
+      model: openai/ibm/granite-8b-code-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_codegemma-7b
+    litellm_params:
+      model: openai/google/codegemma-7b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_codegemma-1.1-7b
+    litellm_params:
+      model: openai/google/codegemma-1.1-7b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  #
+  # NVIDIA NIM - Reasoning Tier
+  #
+  - model_name: nim_nemotron-reasoning-30b
+    litellm_params:
+      model: openai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_cosmos-reason-8b
+    litellm_params:
+      model: openai/nvidia/cosmos-reason2-8b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+
+  - model_name: nim_llama-4-maverick-17b
+    litellm_params:
+      model: openai/meta/llama-4-maverick-17b-128e-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NIM_KEY
+  
+
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY

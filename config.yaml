@@ -13,6 +13,57 @@ model_list:
       api_key: os.environ/GEMINI_API_KEY
 
   #
+  # Vertex AI - Gemini First-Party Text & Multimodal Lineup
+  #
+
+  # --- Gemini 3.5 Generation ---
+  - model_name: vx-gemini-3.5-f
+    litellm_params:
+      model: vertex_ai/gemini-3.5-flash
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  # --- Gemini 3.1 Generation ---
+  - model_name: vx-gemini-3.1-p
+    litellm_params:
+      model: vertex_ai/gemini-3.1-pro-preview
+      vertex_location: "global"
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  - model_name: vx-gemini-3.1-fl
+    litellm_params:
+      model: vertex_ai/gemini-3.1-flash-lite
+      vertex_location: "global"
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  # --- Gemini 3 Generation ---
+  - model_name: vx-gemini-3-f
+    litellm_params:
+      model: vertex_ai/gemini-3-flash
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  # --- Gemini 2.5 Generation ---
+  - model_name: vx-gemini-2.5-p
+    litellm_params:
+      model: vertex_ai/gemini-2.5-pro
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  - model_name: vx-gemini-2.5-f
+    litellm_params:
+      model: vertex_ai/gemini-2.5-flash
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  - model_name: vx-gemini-2.5-fl
+    litellm_params:
+      model: vertex_ai/gemini-2.5-flash-lite
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+
+  - model_name: v-fable
+    litellm_params:
+      model: vertex_ai/claude-fable-5
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS_PATH
+
+  #
   # Mistral
   #
   - model_name: mistral

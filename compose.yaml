@@ -6,8 +6,11 @@ services:
       - "4000:4000"
     env_file:
       - .env
+    environment:
+      - VERTEX_AI_LOCATION=${VERTEX_AI_LOCATION}
     volumes:
       - ./config.yaml:/app/config.yaml
+      - ./.secrets:/app/.secrets
     command:
       - "--config"
       - "/app/config.yaml"
